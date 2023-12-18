@@ -3,7 +3,7 @@
 import React from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
-import Gallery from '../../components/Header/Gallery/Gallery';
+import Gallery from '../../components/Gallery/Gallery';
 
 function Home() {
   return (
