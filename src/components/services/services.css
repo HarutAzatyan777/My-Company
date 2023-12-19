@@ -1,0 +1,87 @@
+/* services.css */
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .services-section {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .service-item {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-item h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .service-item p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  
+  /* Styling for SEO Service */
+  .service-item:nth-child(4) {
+    border-top: 4px solid #4caf50; /* Green color for SEO */
+  }
+  
+  /* Styling for UI/UX Service */
+  .service-item:nth-child(5) {
+    border-top: 4px solid #2196f3; /* Blue color for UI/UX */
+  }
+  
+  /* Plans & Pricing Section */
+  .pricing-section {
+    padding: 40px 0;
+  }
+  
+  .pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .pricing-item {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+  }

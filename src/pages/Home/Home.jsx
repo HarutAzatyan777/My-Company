@@ -4,6 +4,7 @@ import React from 'react';
 import './Home.css';
 import Header from '../../components/Header/Header';
 import Gallery from '../../components/Gallery/Gallery';
+import Services from '../../components/services/services';
 
 function Home() {
   return (
@@ -25,6 +26,8 @@ function Home() {
         </div>
       </section>
 <Gallery />
+<Services />
+
    
     </div>
   );

@@ -36,6 +36,7 @@
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease-in-out;
+  text-align: center; /* Center the text within the gallery item */
 }
 
 .gallery-item img {
@@ -44,10 +45,22 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-item p {
-  margin-top: 10px;
+.image-caption {
+  position: absolute;
+  top: 50%; /* Adjust as needed to center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff; /* Optional: Set text color */
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Set background color */
+  padding: 10px; /* Optional: Add padding to the caption */
 }
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
 
 .gallery-item:hover {
   transform: scale(1.1);
