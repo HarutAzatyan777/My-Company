@@ -1,0 +1,17 @@
+/* PlansPricing.css */
+
+.plans-pricing-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .plans-pricing-container h2 {
+    color: #333;
+  }
+  
+  .plans-pricing-container p {
+    color: #666;
+    line-height: 1.5;
+  }
+  

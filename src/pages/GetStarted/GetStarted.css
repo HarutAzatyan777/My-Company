@@ -1,0 +1,26 @@
+/* GetStarted.css */
+
+.get-started-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .get-started-container h2 {
+    color: #333;
+  }
+  
+  .get-started-container p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .get-started-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  

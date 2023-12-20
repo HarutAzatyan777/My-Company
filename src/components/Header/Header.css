@@ -1,62 +1,114 @@
 /* Header.css */
 
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333; /* Change the background color as needed */
-    color: #fff; /* Change the text color as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+}
+
+.logo-container {
+  /* Add any styling for the logo container */
+}
+
+.logo {
+  width: 100px; /* Adjust the width of the logo */
+  height: auto;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-navigation li {
+  margin-right: 20px; 
+  cursor: alias;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  color: #fff; /* Change the text color as needed */
+  /* Remove cursor property to keep the default cursor */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333; /* Change the background color as needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff; /* Change the text color as needed */
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.menu-icon {
+  display: none; /* Hide menu icon by default for larger screens */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Display menu icon for smaller screens */
   }
-  
-  .logo-container {
-    /* Add any styling for the logo container */
-  }
-  
-  .logo {
-    width: 100px; /* Adjust the width of the logo */
-    height: auto;
-  }
-  
-  .main-navigation {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .main-navigation ul {
-    list-style: none;
     display: flex;
-  }
-  
-  .main-navigation li {
-    margin-right: 20px; /* Adjust the spacing between navigation items */
-  }
-  
-  .main-navigation a {
-    text-decoration: none;
-    color: #fff; /* Change the text color as needed */
-  }
-  
-  /* Dropdown styles */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
     position: absolute;
+    top: 70px; /* Adjust the top spacing as needed */
+    left: 0;
     background-color: #333; /* Change the background color as needed */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+  }
+
+  .main-header.mobile-menu-open {
+    background-color: #555; /* Change the background color when the mobile menu is open */
+    /* Add any additional styles for the main header when the mobile menu is open */
   }
   
-  .dropdown-content a {
-    color: #fff; /* Change the text color as needed */
-    padding: 12px 16px;
-    display: block;
+  .main-header.mobile-menu-open .main-navigation ul {
+    opacity: 1;
+    visibility: visible;
   }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .main-navigation li {
+    margin: 10px 0;
+    cursor: alias;
   }
-  
+}

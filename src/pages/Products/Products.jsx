@@ -1,7 +1,7 @@
 // Gallery.jsx
 
 import React from 'react';
-import './Gallery.css';
+import './Products.css';
 
 function Gallery() {
   const totalItems = 8;
@@ -11,7 +11,7 @@ function Gallery() {
     <div>
       {/* Left-scrolling section */}
       <section className="gallery-container left-scroll">
-  <h2>Our Portfolio</h2>
+
   <div className="gallery">
     {/* Duplicated gallery items for endless scrolling */}
     <div className="gallery-items left-scroll">

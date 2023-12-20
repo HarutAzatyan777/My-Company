@@ -1,14 +1,52 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Link as RouterLink } from 'react-router-dom';
 import Home from './pages/Home/Home';
-
+import Resources from './pages/Resources/Resources';
+import PlansPricing from './pages/PlansPricing/PlansPricing';
+import Login from './pages/Login/Login';
+import GetStarted from './pages/GetStarted/GetStarted';
+import Products from './pages/Products/Products';
+import { Link as ScrollLink } from 'react-scroll';
 
 const RoutesConfig = () => {
+  // Set up scroll behavior on route change
+  useEffect(() => {
+    const handleScroll = () => {
+      // Handle any scroll-related logic here
+    };
 
-return (
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
+  return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route
+        path="/"
+        element={
+          <div>
+            {/* Add a link to scroll to the top */}
+            <ScrollLink to="top" smooth={true} duration={500}>
+              
+            </ScrollLink>
 
+            {/* Your existing Home component */}
+            <Home />
+          </div>
+        }
+      />
+
+      {/* Add routes for other pages */}
+      <Route path="resources" element={<Resources />} />
+      <Route path="plans-pricing" element={<PlansPricing />} />
+      <Route path="login" element={<Login />} />
+      <Route path="get-started" element={<GetStarted />} />
+      <Route path="products" element={<Products />} />
     </Routes>
   );
 };

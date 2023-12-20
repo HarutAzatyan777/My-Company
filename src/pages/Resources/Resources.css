@@ -1,0 +1,17 @@
+/* Resources.css */
+
+.resources-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .resources-container h2 {
+    color: #333;
+  }
+  
+  .resources-container p {
+    color: #666;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,143 @@
+/* Gallery.css */
+
+.gallery-container {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    display: flex;
+    animation: scrollGallery 300s linear infinite; /* Adjust the duration to slow down or speed up the animation */
+  }
+  
+  .gallery:hover {
+    animation-play-state: paused;
+  }
+  
+  .gallery-items {
+    display: flex;
+    width: fit-content;
+  }
+  
+  @keyframes scrollGallery {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 8 * 3)); /* Adjust the width of each item and the number of items */
+    }
+  }
+  
+  .gallery-item {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Center the text within the gallery item */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-caption {
+    position: absolute;
+    top: 50%; /* Adjust as needed to center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff; /* Optional: Set text color */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Set background color */
+    padding: 10px; /* Optional: Add padding to the caption */
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .gallery-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Uni Wait effect */
+  .gallery-container.waiting {
+    cursor: wait;
+  }
+  
+  .gallery-container.waiting .gallery-item:hover {
+    transform: scale(1); /* Reset scale on hover when in "waiting" state */
+  }
+  
+  .gallery-container.waiting .gallery-items {
+    animation-play-state: paused;
+  }
+  
+  
+  
+  
+  /* Gallery.css */
+  
+  .gallery-container-2 {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .gallery-2 {
+    display: flex;
+    animation: scrollGallery 300s linear infinite; /* Adjust the duration to slow down or speed up the animation */
+  }
+  
+  .gallery-2:hover {
+    animation-play-state: paused;
+  }
+  
+  .gallery-items-2 {
+    display: flex;
+    width: fit-content;
+  }
+  
+  .gallery-item-2 {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item-2 img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-item-2 p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .gallery-item-2:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Uni Wait effect */
+  .gallery-container-2.waiting {
+    cursor: wait;
+  }
+  
+  .gallery-container-2.waiting .gallery-item:hover {
+    transform: scale(1); /* Reset scale on hover when in "waiting" state */
+  }
+  
+  .gallery-container-2.waiting .gallery-items {
+    animation-play-state: paused;
+  }
+  
