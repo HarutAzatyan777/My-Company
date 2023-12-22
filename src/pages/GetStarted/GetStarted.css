@@ -1,26 +1,83 @@
-/* GetStarted.css */
+/* get-started.css */
 
-.get-started-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* Section Styles */
+.get-started-section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.get-started-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Service Card Styles */
+.service-card {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Button Styles */
+.cta-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .get-started-container h2 {
-    color: #333;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .get-started-container p {
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 20px;
+}
+
+.service-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Scroll Animation */
+@keyframes scrollFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  .get-started-button {
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    cursor: pointer;
-    border: none;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Apply scroll animation to the entire section */
+
+/* Add a class to the section when it comes into view */
+

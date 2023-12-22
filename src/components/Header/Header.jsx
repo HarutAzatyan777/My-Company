@@ -51,10 +51,12 @@ const Header = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="plans-pricing" smooth={true} duration={500}>
-              Plans & Pricing
+          <ScrollLink to="priceplans" smooth={true} duration={500}>
+          priceplans
             </ScrollLink>
-          </li>
+
+</li>
+
           <li>
             <ScrollLink to="login" smooth={true} duration={500}>
               Log In

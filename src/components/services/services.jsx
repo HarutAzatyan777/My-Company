@@ -5,7 +5,8 @@ import './services.css'; // Importing styles for the Services component
 
 function Services() {
   return (
-    <section className="services-section">
+    <div id="priceplans">
+    <section iclassName="services-section">
       <h2>Our Services</h2>
       <div className="services-container">
         {/* Developer Services */}
@@ -63,6 +64,7 @@ function Services() {
         </div>
       </section>
     </section>
+    </div>
   );
 }
 

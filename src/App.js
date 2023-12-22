@@ -1,7 +1,6 @@
 // src/App.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import RoutesConfig from './routes';
-import reportWebVitals from './reportWebVitals'; // Import the modified reportWebVitals file
 
 const App = () => {
 
