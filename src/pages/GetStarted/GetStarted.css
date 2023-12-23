@@ -26,6 +26,7 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
+  
 }
 
 .service-card:hover {
@@ -81,3 +82,18 @@ h2 {
 
 /* Add a class to the section when it comes into view */
 
+.get-started-section.green-bg {
+  background-color: rgb(255, 255, 255);
+}
+
+.cta-button.green-button {
+  background-color: green;
+  color: white;
+  /* Add any other styles you want for the green button */
+}
+
+.service-card.selected-card {
+  background-color: green;
+  color: white;
+  /* Add any other styles you want for the selected card */
+}
