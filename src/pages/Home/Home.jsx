@@ -3,33 +3,38 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import './Home.css';
-import Header from '../../components/Header/Header';
 import Services from '../../components/services/services';
 import Products from "../Products/Products"
 import GetStarted from '../GetStarted/GetStarted';
+import Features from '../Features/Features';
+import Resources from '../Resources/Resources';
+import langAM from '../../Translations/lang_am.json';
+import langEN from '../../Translations/lang_en.json';
 
+function Home({ currentLanguage, handleLanguageSwitch }) {
+  const translations = currentLanguage === 'am' ? langAM : langEN;
 
-
-function Home() {
   return (
     <div>
-      <Header />
+ 
 
       <section className="landing-section" id="top">
         <div className="landing-content">
-          <h1>Welcome to Our Agency</h1>
-          <p>
-            We are a team of freelance web developers, ready to bring your ideas to life.
-            Whether you need a personal website or a complex business solution, we've got you covered.
-          </p>
-          <p>
-            Our expertise extends to working with in-house teams within businesses.
-            Let's collaborate to create innovative and impactful web solutions.
-          </p>
+          <h1>{translations.welcome_message}</h1>
+          <p>{translations.intro_paragraph1}</p>
+          <p>{translations.intro_paragraph2}</p>
           <ScrollLink to="get-started" smooth={true} duration={500}>
-            <button href='/get-started' className="cta-button">Get Started</button>
+            <button className="cta-button">{translations.get_started_button}</button>
           </ScrollLink>
         </div>
+      </section>
+
+      <section id="products">
+        <Products />
+      </section>
+
+      <section id="getstarted ">
+        <GetStarted />
       </section>
 
       <section id="products">
@@ -45,7 +50,11 @@ function Home() {
 
      
       <Services />
+      <Features />
+      <Resources />
+
     </div>
+    
   );
 }
 

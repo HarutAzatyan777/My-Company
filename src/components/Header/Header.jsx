@@ -4,7 +4,7 @@ import './Header.css'; // Import your CSS file for styling
 
 
 
-const Header = () => {
+const Header = ({ currentLanguage, onLanguageSwitch }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -23,6 +23,9 @@ const Header = () => {
           <div className="bar"></div>
         </div>
         <ul>
+        <li>
+          <button onClick={onLanguageSwitch}>Switch Language</button>
+        </li>
           <li>
             <ScrollLink to="products" smooth={true} duration={500}>
               Products

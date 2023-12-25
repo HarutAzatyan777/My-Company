@@ -1,5 +1,3 @@
-// Templates.jsx
-
 import React from 'react';
 
 // Template for Personal Websites
@@ -10,6 +8,7 @@ export const PersonalWebsiteTemplate = () => (
       Need a personal website to showcase your portfolio or blog? We can create a stunning and responsive website tailored to your style.
     </p>
     <p>Price: $50</p>
+    <p>Features: Portfolio showcase, blog integration</p>
   </div>
 );
 
@@ -21,6 +20,7 @@ export const BusinessSolutionsTemplate = () => (
       Running a business? We specialize in developing complex and scalable web solutions to address your business challenges.
     </p>
     <p>Price: $80</p>
+    <p>Features: Scalable solutions, business process integration</p>
   </div>
 );
 
@@ -32,5 +32,6 @@ export const CollaborativeProjectsTemplate = () => (
       Work with our team to integrate seamlessly with your in-house teams. Let's collaborate to bring innovative and impactful web solutions to life.
     </p>
     <p>Price: $120</p>
+    <p>Features: Team collaboration, innovative solutions</p>
   </div>
 );
