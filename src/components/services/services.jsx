@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './services.css'; // Importing styles for the Services component
+import { BusinessSolutionsTemplate, CollaborativeProjectsTemplate, PersonalWebsiteTemplate } from '../Templates/Templates';
 
 function Services() {
   return (
@@ -63,6 +64,9 @@ function Services() {
           </div>
         </div>
       </section>
+      <PersonalWebsiteTemplate />
+    <BusinessSolutionsTemplate />
+    <CollaborativeProjectsTemplate/>
     </section>
     </div>
   );

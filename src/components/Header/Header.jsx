@@ -1,8 +1,6 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import './Header.css'; // Import your CSS file for styling
-
-
 
 const Header = ({ currentLanguage, onLanguageSwitch }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,9 +21,13 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
           <div className="bar"></div>
         </div>
         <ul>
-        <li>
-          <button onClick={onLanguageSwitch}>Switch Language</button>
-        </li>
+          <div className="switch2">
+            <input id="language-toggle" className="check-toggle check-toggle-round-flat" type="checkbox" onChange={onLanguageSwitch} checked={currentLanguage === 'FIN'} />
+            <label htmlFor="language-toggle"></label>
+            <span className="on">FIN</span>
+            <span className="off">ENG</span>
+          </div>
+
           <li>
             <ScrollLink to="products" smooth={true} duration={500}>
               Products
@@ -49,17 +51,15 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
             </div>
           </li>
           <li>
-            <ScrollLink to="Recurces" smooth={true} duration={500}>
+            <ScrollLink to="Resources" smooth={true} duration={500}>
               Resources
             </ScrollLink>
           </li>
           <li>
-          <ScrollLink to="priceplans" smooth={true} duration={500}>
-          priceplans
+            <ScrollLink to="priceplans" smooth={true} duration={500}>
+              Price Plans
             </ScrollLink>
-
-</li>
-
+          </li>
           <li>
             <ScrollLink to="login" smooth={true} duration={500}>
               Log In

@@ -1,4 +1,6 @@
 import React from 'react';
+import "./Template.css"
+
 
 // Template for Personal Websites
 export const PersonalWebsiteTemplate = () => (

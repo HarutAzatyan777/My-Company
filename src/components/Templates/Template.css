@@ -1,0 +1,46 @@
+/* Templates.css */
+
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card h3 {
+    color: #333333;
+  }
+  
+  .service-card p {
+    color: #666666;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Add animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animation to service cards */
+  .service-card {
+    animation: fadeIn 0.8s ease-out;
+  }
+  

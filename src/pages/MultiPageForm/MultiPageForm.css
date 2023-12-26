@@ -1,60 +1,81 @@
 /* MultiPageForm.css */
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+.popup {
+  position: relative;
+ min-height: 300px;
+  min-width:600px ;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
 }
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 20px;
+.popup__content {
+  opacity: 5;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.question-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quiz__question {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type='radio'] {
+  margin-right: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.popup__final-img {
+  max-width: 100%;
+  margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+/* Add animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-label {
-  margin-bottom: 10px;
+/* Apply animation to popup content */
+.popup__content {
+  animation: fadeInUp 0.5s ease-out;
 }
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px 15px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
-h2,
-h3 {
-  color: #333;
-}
-
-h3 {
-  margin-top: 20px;
-}
-
-/* Add additional styles based on your design needs */
