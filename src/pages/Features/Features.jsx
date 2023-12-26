@@ -46,7 +46,7 @@ const Features = () => {
   ];
 
   return (
-    <div id='Feature' className="features-container">
+    <div id='Features' className="features-container">
       <h2>Our Features</h2>
       <div className="features-list">
         {featuresData.map((feature, index) => (

@@ -37,16 +37,6 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
         <GetStarted />
       </section>
 
-      <section id="products">
-     
-       <Products />
-      </section>
-
-      <section id="getstarted ">
-  <GetStarted />
-      </section>
-
-      {/* Add other sections as needed, e.g., feature1, feature2, feature3, resources, plans-pricing, login */}
 
      
       <Services />

@@ -1,164 +1,115 @@
-// MultiPageForm.jsx
-
 import React, { useState } from 'react';
 import './MultiPageForm.css';
 
+const questionsData = [
+  {
+    id: 'intro',
+    text: 'We are a team of freelance web developers, ready to bring your ideas to life. How can we assist you today?',
+    options: ['Start a New Project', 'Enhance Existing Project', 'Explore Collaboration Opportunities', 'Other'],
+  },
+  {
+    id: 'question1',
+    text: 'What type of page are you looking for?',
+    options: ['Personal Page', 'Business Page', 'E-commerce', 'Other'],
+  },
+  {
+    id: 'question2',
+    text: 'Select your preferred option for question 2:',
+    options: ['Option A', 'Option B', 'Option C', 'Other'],
+  },
+  {
+    id: 'question3',
+    text: 'Describe the website you have in mind:',
+    options: [], // No options for an open-ended question
+  },
+];
+
 const MultiPageForm = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [userData, setUserData] = useState({
-    name: { id: 'name', value: '' },
-    preferredColor: { id: 'preferredColor', value: '' },
-    favoriteFeatures: { id: 'favoriteFeatures', value: '' },
-    questionnaireAnswers: {
-      experience: { id: 'experience', value: '' },
-      interest: { id: 'interest', value: '' },
-      feedback: { id: 'feedback', value: '' },
-    },
-  });
+  const [currentPage, setCurrentPage] = useState(0);
+  const [userData, setUserData] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [approximatePrice, setApproximatePrice] = useState(null);
 
-  const handleInputChange = (id, value, category = 'userData') => {
+  const { text, options } = questionsData[currentPage];
+
+  const handleInputChange = (id, value) => {
     setUserData((prevData) => ({
       ...prevData,
-      [category]: {
-        ...prevData[category],
-        [id]: {
-          ...prevData[category][id],
-          value,
-        },
-      },
+      [id]: { ...prevData[id], value },
     }));
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+    // Proceed to the next question only if the current question has been answered
+    if (userData[`question${currentPage + 1}`]?.value) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
   };
 
   const handlePrevPage = () => {
-    setCurrentPage((prevPage) => Math.max(1, prevPage - 1));
+    setCurrentPage((prevPage) => Math.max(0, prevPage - 1));
   };
 
   const handleFormSubmit = () => {
-    // You can perform actions with the collected data here
+    // Perform actions with the collected data
     console.log('User preferences:', userData);
-    // Add logic to send the data to your server or perform other actions
 
-    // Calculate approximate price (example: based on the length of the user's name and feedback)
-    const nameLength = userData.name.value.length;
-    const feedbackLength = userData.questionnaireAnswers.feedback.value.length;
-    const price = nameLength + feedbackLength;
+    // Example: Calculate approximate price based on the length of the answers
+    const totalLength = Object.values(userData).reduce(
+      (sum, question) => sum + question.value.length,
+      0
+    );
 
     // Set the approximate price state
-    setApproximatePrice(price);
+    setApproximatePrice(totalLength);
 
     // Set the formSubmitted state to true
     setFormSubmitted(true);
   };
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 1:
-        return (
-          <>
-            <label>
-              Your Name:
-              <input
-                type="text"
-                value={userData.name.value}
-                onChange={(e) => handleInputChange('name', e.target.value)}
-              />
-            </label>
-            <br />
-            <label>
-              Preferred Color:
-              <input
-                type="text"
-                value={userData.preferredColor.value}
-                onChange={(e) => handleInputChange('preferredColor', e.target.value)}
-              />
-            </label>
-            <br />
-            <label>
-              Favorite Features:
-              <textarea
-                value={userData.favoriteFeatures.value}
-                onChange={(e) => handleInputChange('favoriteFeatures', e.target.value)}
-              />
-            </label>
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <h3>Questionnaire - Page {currentPage}</h3>
-            <label>
-              How would you rate your experience with our website? (1-5)
-              <input
-                type="number"
-                value={userData.questionnaireAnswers.experience.value}
-                onChange={(e) =>
-                  handleInputChange('experience', e.target.value, 'questionnaireAnswers')
-                }
-              />
-            </label>
-            <br />
-            <label>
-              What interests you the most on our website?
-              <input
-                type="text"
-                value={userData.questionnaireAnswers.interest.value}
-                onChange={(e) =>
-                  handleInputChange('interest', e.target.value, 'questionnaireAnswers')
-                }
-              />
-            </label>
-            <br />
-            <label>
-              Any additional feedback or suggestions?
-              <textarea
-                value={userData.questionnaireAnswers.feedback.value}
-                onChange={(e) =>
-                  handleInputChange('feedback', e.target.value, 'questionnaireAnswers')
-                }
-              />
-            </label>
-          </>
-        );
-      // Add more cases for additional pages
-
-      default:
-        return null;
-    }
-  };
-
-  const renderThankYou = () => {
-    return (
-      <div>
-        <h3>Thank you for submitting your answers!</h3>
-        {approximatePrice !== null && (
-          <p>Your approximate price: ${approximatePrice}</p>
-        )}
-        {/* Display a summary of the user's responses if needed */}
-      </div>
-    );
-  };
-
   return (
     <div>
-      {formSubmitted ? renderThankYou() : renderPage()}
-      <br />
-      {!formSubmitted && (
-        <>
-          <button onClick={handlePrevPage} disabled={currentPage === 1}>
-            Previous
-          </button>
-          <button onClick={currentPage === 5 ? handleFormSubmit : handleNextPage}>
-            {currentPage === 5 ? 'Submit' : 'Next'}
-          </button>
-        </>
-      )}
-    </div>
+    {formSubmitted ? (
+      <div className="popup__content popup__content6">
+        <h2 className="popup__title">Great! Here is the perfect series for you: ....</h2>
+        <img
+          src=""
+          alt="website"
+          className="popup__final-img"
+        />
+        {approximatePrice !== null && <p>Your approximate price: ${approximatePrice}</p>}
+      </div>
+    ) : (
+      <div className="popup">
+        <div className={`popup__content ${currentPage < questionsData.length && 'question-visible'}`}>
+          {currentPage < questionsData.length && (
+            <>
+              <h5 className="quiz__question">{text}</h5>
+              {options.map((option, index) => (
+                <label key={index}>
+                  <input
+                    type={options.length > 0 ? 'radio' : 'text'}
+                    name={`question${currentPage + 1}`}
+                    value={option}
+                    checked={userData[`question${currentPage + 1}`]?.value === option}
+                    onChange={() => handleInputChange(`question${currentPage + 1}`, option)}
+                  />
+                  {option}
+                </label>
+              ))}
+            </>
+          )}
+        </div>
+
+        <button onClick={handlePrevPage} disabled={currentPage === 0}>
+          Previous
+        </button>
+        <button onClick={currentPage === questionsData.length - 1 ? handleFormSubmit : handleNextPage}>
+          {currentPage === questionsData.length - 1 ? 'Submit' : 'Next'}
+        </button>
+      </div>
+    )}
+  </div>
   );
 };
 

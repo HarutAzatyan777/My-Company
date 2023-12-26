@@ -32,7 +32,7 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
             </ScrollLink>
           </li>
           <li className="dropdown">
-            <ScrollLink to="features" smooth={true} duration={500}>
+            <ScrollLink to="Features" smooth={true} duration={500}>
               Features
             </ScrollLink>
             <div className="dropdown-content">
@@ -49,7 +49,7 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
             </div>
           </li>
           <li>
-            <ScrollLink to="resources" smooth={true} duration={500}>
+            <ScrollLink to="Recurces" smooth={true} duration={500}>
               Resources
             </ScrollLink>
           </li>
