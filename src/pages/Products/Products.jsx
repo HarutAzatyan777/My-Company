@@ -23,6 +23,7 @@ function Gallery() {
         </div>
       ))}
     </div>
+    
   </div>
   <div className="gallery-2">
     {/* Duplicated gallery items for endless scrolling */}
@@ -33,9 +34,27 @@ function Gallery() {
           <img src={`/website/website${index}.png`} alt={`Website ${index}`} />
           <p className="image-caption">Website {index} </p>
         </div>
+        
       ))}
     </div>
   </div>
+
+
+  <div className="gallery-3">
+    {/* Duplicated gallery items for endless scrolling */}
+    <div className="gallery-items-3 left-scroll">
+      {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
+        <div className="gallery-item-3" key={index}>
+          {/* Add an image tag with a dynamic source */}
+          <img src={`/website/website${index}.png`} alt={`Website ${index}`} />
+          <p className="image-caption-3">Website {index} </p>
+        </div>
+        
+      ))}
+    </div>
+  </div>
+
+  
 </section>
 
 

@@ -1,9 +1,10 @@
 /* Home.css */
 
 .landing-section {
-    background-color: #f8f8f8; /* Change the background color as needed */
-    padding: 80px 0;
+    background-color: #333; /* Change the background color as needed */
+    padding: 40px 0;
     text-align: center;
+    
   }
   
   .landing-content {
@@ -14,16 +15,18 @@
   .landing-content h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: white;
   }
   
   .landing-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    color: white;
   }
   
   .cta-button {
-    background-color: #333; /* Change the button color as needed */
-    color: #fff; /* Change the button text color as needed */
+    background-color: #fff; /* Change the button color as needed */
+    color: #000000; /* Change the button text color as needed */
     padding: 15px 30px;
     font-size: 1.2em;
     border: none;

@@ -4,12 +4,23 @@ import './Header.css'; // Import your CSS file for styling
 
 const Header = ({ currentLanguage, onLanguageSwitch }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showOnly, setShowOnly] = useState(false);
 
+
+  const handleLanguageSwitch = () => {
+    setShowOnly(!showOnly);
+    onLanguageSwitch(); // Call your existing language switch logic here
+  };
+
+  
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  
+
   return (
+    
     <header className={`main-header ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="logo-container">
         <img src="/path/to/logo.png" alt="Logo" className="logo" />
@@ -20,13 +31,9 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
+
+         
         <ul>
-          <div className="switch2">
-            <input id="language-toggle" className="check-toggle check-toggle-round-flat" type="checkbox" onChange={onLanguageSwitch} checked={currentLanguage === 'FIN'} />
-            <label htmlFor="language-toggle"></label>
-            <span className="on">FIN</span>
-            <span className="off">ENG</span>
-          </div>
 
           <li>
             <ScrollLink to="products" smooth={true} duration={500}>
@@ -70,6 +77,18 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
               Get Started
             </ScrollLink>
           </li>
+             
+      <input
+        type="checkbox"
+        className="check-toggle-round-flat"
+        id="toggleSwitch"
+        checked={showOnly}
+        onChange={handleLanguageSwitch}
+      />
+      <label htmlFor="toggleSwitch" className="switch">
+        <span className="on">En</span>
+        <span className="off">Am</span>
+      </label>
         </ul>
       </nav>
     </header>

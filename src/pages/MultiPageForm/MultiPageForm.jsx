@@ -101,7 +101,7 @@ const MultiPageForm = () => {
           )}
         </div>
 
-        <button onClick={handlePrevPage} disabled={currentPage === 0}>
+        <button  className='previous' onClick={handlePrevPage} disabled={currentPage === 0}>
           Previous
         </button>
         <button onClick={currentPage === questionsData.length - 1 ? handleFormSubmit : handleNextPage}>

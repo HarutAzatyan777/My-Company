@@ -40,7 +40,7 @@ input[type='radio'] {
   margin-right: 5px;
 }
 
-button {
+.previous{
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -52,7 +52,7 @@ button {
   transition: background-color 0.3s ease-out;
 }
 
-button:hover {
+.previous:hover {
   background-color: #0056b3;
 }
 
