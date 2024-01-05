@@ -11,6 +11,8 @@ import Resources from '../Resources/Resources';
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 
+
+
 function Home({ currentLanguage, handleLanguageSwitch }) {
   const translations = currentLanguage === 'am' ? langAM : langEN;
 
@@ -30,12 +32,12 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
       </section>
 
       <section id="products">
-        <Products />
+        <Products currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
       </section>
 
-      <section id="getstarted ">
-        <GetStarted />
-      </section>
+      <section id="getstarted">
+   <GetStarted currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
+</section>
 
 
      

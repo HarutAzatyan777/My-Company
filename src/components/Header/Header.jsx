@@ -23,7 +23,7 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
     
     <header className={`main-header ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="logo-container">
-        <img src="/path/to/logo.png" alt="Logo" className="logo" />
+        <img src="Log.png" alt="Logo" className="logo" />
       </div>
       <nav className={`main-navigation ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <div className="menu-icon" onClick={toggleMobileMenu}>
