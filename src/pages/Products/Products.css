@@ -48,7 +48,7 @@
   .gallery-item img {
     width: 100%;
    height: 300px;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -125,7 +125,7 @@
   .gallery-item-2 img {
     width: 100%;
     height: 300px ;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -196,7 +196,7 @@
   .gallery-item-3 img {
     width: 100%;
    height: 300px;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -220,4 +220,17 @@
   .gallery-item-3:hover {
     transform: scale(1.1);
   }
+  
+  @media only screen and (max-width: 765px) {
+    
+    .gallery-item img,
+  .gallery-item-2 img ,
+  .gallery-item-3 img {
+    width: 100%;
+  
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
   

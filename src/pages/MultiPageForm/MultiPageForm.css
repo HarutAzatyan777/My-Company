@@ -2,8 +2,8 @@
 
 .popup {
   position: relative;
- min-height: 300px;
-  min-width:600px ;
+  min-height: 300px;
+  min-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -40,7 +40,7 @@ input[type='radio'] {
   margin-right: 5px;
 }
 
-.previous{
+.previous {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -78,4 +78,22 @@ input[type='radio'] {
 /* Apply animation to popup content */
 .popup__content {
   animation: fadeInUp 0.5s ease-out;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .popup {
+    min-width: auto;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .popup__content {
+  
+    transform: none;
+  }
+
+  .quiz__question {
+    font-size: 16px;
+  }
 }
