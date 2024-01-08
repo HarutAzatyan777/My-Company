@@ -1,0 +1,23 @@
+[
+    {
+      "id": "intro",
+      "text": "Tell us about your project. How can we assist you?",
+      "options": ["Web Development", "App Development", "UI/UX Design", "Other"]
+    },
+    {
+      "id": "question1",
+      "text": "What type of project are you working on?",
+      "options": ["Personal Project", "Business Project", "Startup", "Other"]
+    },
+    {
+      "id": "question2",
+      "text": "Select your preferred technology stack:",
+      "options": ["React.js", "Angular.js", "Vue.js", "Other"]
+    },
+    {
+      "id": "question3",
+      "text": "Provide more details about your project:",
+      "options": []
+    }
+  ]
+  

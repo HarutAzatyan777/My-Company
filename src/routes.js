@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, Link as RouterLink } from 'react-router-dom';
+import React, { useEffect,useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Resources from './pages/Resources/Resources';
 import PlansPricing from './pages/PlansPricing/PlansPricing';
@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import GetStarted from './pages/GetStarted/GetStarted';
 import Products from './pages/Products/Products';
 import { Link as ScrollLink } from 'react-scroll';
+import Header from './components/Header/Header';
 
 const RoutesConfig = () => {
   // Set up scroll behavior on route change
@@ -23,8 +24,14 @@ const RoutesConfig = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []); // Empty dependency array ensures the effect runs only once on mount
+  const handleLanguageSwitch = () => {
+    setCurrentLanguage((prevLanguage) => (prevLanguage === 'am' ? 'en' : 'am'));
+  };
 
+  const [currentLanguage, setCurrentLanguage] = useState('am');
   return (
+
+    
     <Routes>
       <Route
         path="/"
@@ -36,7 +43,8 @@ const RoutesConfig = () => {
             </ScrollLink>
 
             {/* Your existing Home component */}
-            <Home />
+            <Header currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
+            <Home currentLanguage={currentLanguage}/>
           </div>
         }
       />

@@ -33,7 +33,7 @@ function Gallery() {
             {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
               <div className="gallery-item-2" key={index}>
                 {/* Add an image tag with a dynamic source */}
-                <img src={`/website2/website${index}.png`} alt={`Website ${index}`} />
+                <img src={`/website2/website${index}.web`} alt={`Website ${index}`} />
                 <p className="image-caption">{t("let's go")} </p>
               </div>
             ))}

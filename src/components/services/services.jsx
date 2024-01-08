@@ -3,8 +3,11 @@
 import React from 'react';
 import './services.css'; // Importing styles for the Services component
 import { BusinessSolutionsTemplate, CollaborativeProjectsTemplate, PersonalWebsiteTemplate } from '../Templates/Templates';
+import langAM from '../../Translations/lang_am.json';
+import langEN from '../../Translations/lang_en.json';
 
-function Services() {
+function Services({ currentLanguage}) {
+  const translations = currentLanguage === 'am' ? langAM : langEN;
   return (
     <div id="priceplans">
     <section iclassName="services-section">
@@ -12,7 +15,7 @@ function Services() {
       <div className="services-container">
         {/* Developer Services */}
         <div className="service-item">
-          <h3>Developer</h3>
+          <h3>{translations.services_Dev}</h3>
           <p>Web development using the latest technologies. Starting at $500.</p>
         </div>
 

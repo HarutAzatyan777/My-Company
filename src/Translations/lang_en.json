@@ -3,6 +3,13 @@
     "welcome_message": "Welcome to Our Agency",
     "intro_paragraph1": "We are a team of freelance web developers, ready to bring your ideas to life.",
     "intro_paragraph2": "Our expertise extends to working with in-house teams within businesses. Let's collaborate to create innovative and impactful web solutions.",
-    "get_started_button": "Get Started"
+    "get_started_button": "Get Started",
+    "plans":"This is the Plans & Pricing page content. Add details about your pricing plans here.",
+
+    "services_Dev":"Developer"
+
+    
+
   }
   
+
