@@ -95,6 +95,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s;
+    padding: 0;
   }
 
   .main-header.mobile-menu-open {
