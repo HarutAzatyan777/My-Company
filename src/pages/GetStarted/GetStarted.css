@@ -1,17 +1,21 @@
 /* GetStarted.css */
 
 .container {
-    min-height: 400px; /* Set the minimum height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  min-height: 400px; /* Set the minimum height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Media Query for screens 600px and below */
+@media only screen and (max-width: 600px) {
+  .container {
+    min-height: auto; /* Adjust the minimum height as needed for smaller screens */
   }
-  
-  h2 {
-    color: #333;
-  }
-  
-  /* Add additional styles based on your design needs */
-  
+}

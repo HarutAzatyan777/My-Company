@@ -1,43 +1,63 @@
 /* Home.css */
 
 .landing-section {
-    background-color: #333; /* Change the background color as needed */
-    padding: 40px 0;
-    text-align: center;
-    
-  }
-  
-  .landing-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .landing-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .landing-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .cta-button {
-    background-color: #fff; /* Change the button color as needed */
-    color: #000000; /* Change the button text color as needed */
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #555; /* Change the hover color as needed */
-  }
-  
+  background-color: #333; /* Change the background color as needed */
+  padding: 40px 0;
+  text-align: center;
+}
 
-  
+.landing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.landing-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-button {
+  background-color: #fff; /* Change the button color as needed */
+  color: #000000; /* Change the button text color as needed */
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555; /* Change the hover color as needed */
+}
+
+/* Media Query for screens 600px and below */
+@media only screen and (max-width: 600px) {
+  .landing-section {
+    padding: 20px 0; /* Adjust the padding for smaller screens */
+  }
+
+  .landing-content {
+    max-width: 100%; /* Make content full width on smaller screens */
+  }
+
+  .landing-content h1 {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  .landing-content p {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Adjust button padding for smaller screens */
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+}
