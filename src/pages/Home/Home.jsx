@@ -10,11 +10,12 @@ import Features from '../Features/Features';
 import Resources from '../Resources/Resources';
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
+import CompanyBio from '../Bio/CompanyBio';
 
 
 
 function Home({ currentLanguage, handleLanguageSwitch }) {
-  const translations = currentLanguage === 'am' ? langAM : langEN;
+  const translations = currentLanguage === 'en' ? langAM : langEN;
 
   return (
     <div>
@@ -40,10 +41,10 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
 </section>
 
 
-     
       <Services />
       <Features />
       <Resources />
+     <CompanyBio />
 
     </div>
     

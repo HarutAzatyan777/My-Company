@@ -1,0 +1,49 @@
+.company-bio-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Text Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply Animations to Specific Elements */
+  .company-bio-container h2,
+  .company-bio-container h3,
+  .company-bio-container h4,
+  .company-bio-container p,
+  .company-bio-container li {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .company-bio-container ul li {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  /* Media Query for 600px or Less */
+  @media screen and (max-width: 600px) {
+    .company-bio-container {
+      padding: 10px;
+    }
+    
+    /* Adjust other styles as needed for smaller screens */
+  }
+  
