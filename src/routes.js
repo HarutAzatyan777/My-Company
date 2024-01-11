@@ -8,6 +8,7 @@ import GetStarted from './pages/GetStarted/GetStarted';
 import Products from './pages/Products/Products';
 import { Link as ScrollLink } from 'react-scroll';
 import Header from './components/Header/Header';
+import Album from './pages/Products/Album';
 
 const RoutesConfig = () => {
   // Set up scroll behavior on route change
@@ -55,6 +56,7 @@ const RoutesConfig = () => {
       <Route path="login" element={<Login />} />
       <Route path="get-started" element={<GetStarted />} />
       <Route path="products" element={<Products />} />
+      <Route path="Album" element={<Album />} />
     </Routes>
   );
 };

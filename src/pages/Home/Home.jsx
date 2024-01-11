@@ -10,7 +10,6 @@ import Features from '../Features/Features';
 import Resources from '../Resources/Resources';
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
-import CompanyBio from '../Bio/CompanyBio';
 
 
 
@@ -44,7 +43,7 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
       <Services />
       <Features />
       <Resources />
-     <CompanyBio />
+   
 
     </div>
     
