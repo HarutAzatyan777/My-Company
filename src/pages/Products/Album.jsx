@@ -34,13 +34,7 @@ function Album() {
 
           </ol>
         </div>
-        <div className="controls">
-          {Array.from({ length: 9 }, (_, index) => index + 1).map(coverNumber => (
-            <label key={coverNumber} htmlFor={`cover-${coverNumber}`}>
-              {coverNumber}
-            </label>
-          ))}
-        </div>
+     
       </div>
       <p>{selectedCover ? `Selected Cover: ${selectedCover}` : 'No cover selected'}</p>
     </div>

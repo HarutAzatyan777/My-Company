@@ -23,7 +23,7 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
     
     <header className={`main-header ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="logo-container">
-        <img src="Log.png" alt="Logo" className="logo" />
+        <img src="Logo.png" alt="Logo" className="logo" />
       </div>
       <nav className={`main-navigation ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <div className="menu-icon" onClick={toggleMobileMenu}>
@@ -58,10 +58,11 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
             </div>
           </li>
           <li>
-            <ScrollLink to="Resources" smooth={true} duration={500}>
+            <ScrollLink to="resources" smooth={true} duration={500}>
               Resources
             </ScrollLink>
           </li>
+          
           <li>
             <ScrollLink to="priceplans" smooth={true} duration={500}>
               Price Plans

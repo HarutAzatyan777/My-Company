@@ -1,46 +1,233 @@
-/* Album.css */
+/* Gallery.css */
 
-/* Define transition time and breakpoint */
-:root {
-  --transition-time: 0.4s;
-  --breakpoint: 600px;
+.gallery-container {
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  background-color: #333;
+
 }
 
-html, body {
-  background: #212121;
-  font-family: Helvetica, sans-serif;
-  font-size: 12px;
-}
-
-.main-container {
-  margin: 4em auto 0 auto;
-  width: 100%;
-  max-width: 1200px; /* Set max-width using flexbox */
+.gallery {
   display: flex;
-  flex-direction: column; /* Adjust flex direction for stacking on smaller screens */
-  align-items: center; /* Center content */
-  animation: scrollGallery 1s infinite alternate; /* Apply scrollGallery animation */
+
+  animation: scrollGallery 150s linear infinite; 
+  animation-direction: reverse;
+}
+
+.gallery:hover {
+  animation-play-state: paused;
+}
+
+.gallery-items {
+  display: flex;
+  width: fit-content;
+  height: 324px;
+
 }
 
 @keyframes scrollGallery {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(-10px); /* Adjust the translateY value for desired scroll distance */
+    transform: translateX(calc(-300px * 8 * 3)); /* Adjust the width of each item and the number of items */
   }
 }
 
-.controls {
-  margin: 2em 0 0 0;
-  text-align: center;
+.gallery-item {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  text-align: center; /* Center the text within the gallery item */
 }
 
-/* ... (rest of the styles) */
+.gallery-item img {
+  width: 100%;
+ height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-/* Media query for screens using CSS variable */
-@media (max-width: var(--breakpoint)) {
-  .coverflow-item {
-    margin: 0 10px; /* Adjust the margin for smaller screens */
+.image-caption {
+  position: absolute;
+  top: 50%; /* Adjust as needed to center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff; /* Optional: Set text color */
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Set background color */
+  padding: 10px; /* Optional: Add padding to the caption */
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+/* Uni Wait effect */
+.gallery-container.waiting {
+  cursor: wait;
+}
+
+.gallery-container.waiting .gallery-item:hover {
+  transform: scale(1); /* Reset scale on hover when in "waiting" state */
+}
+
+.gallery-container.waiting .gallery-items {
+  animation-play-state: paused;
+}
+
+
+
+
+/* Gallery.css */
+
+.gallery-container-2 {
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.gallery-2 {
+  display: flex;
+  animation: scrollGalleryOpposite 150s linear infinite; 
+}
+
+.gallery-2:hover {
+  animation-play-state: paused;
+}
+
+.gallery-items-2 {
+  display: flex;
+  width: fit-content;
+
+}
+
+.gallery-item-2 {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item-2 img {
+  width: 100%;
+  height: 300px ;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item-2 p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.gallery-item-2:hover {
+  transform: scale(1.1);
+}
+
+/* Uni Wait effect */
+.gallery-container-2.waiting {
+  cursor: wait;
+}
+
+.gallery-container-2.waiting .gallery-item:hover {
+  transform: scale(-1); /* Reset scale on hover when in "waiting" state */
+}
+
+.gallery-container-2.waiting .gallery-items {
+  animation-play-state: paused;
+}
+
+@keyframes scrollGalleryOpposite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 8 * 3)); /* Adjust the width of each item and the number of items */
+  }
+}
+
+
+
+.gallery-3 {
+  display: flex;
+
+  animation: scrollGallery 150s linear infinite; 
+  animation-direction: reverse;
+}
+
+.gallery-3:hover {
+  animation-play-state: paused;}
+
+
+  .gallery-items-3 {
+    display: flex;
+    width: fit-content;
+    height: 324px;
+
+  }
+
+
+  
+  .gallery-item-3 {
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Center the text within the gallery item */
+  }
+
+  .gallery-item-3 img {
+    width: 100%;
+   height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-caption-3 {
+    position: absolute;
+    top: 50%; /* Adjust as needed to center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff; /* Optional: Set text color */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Set background color */
+    padding: 10px; /* Optional: Add padding to the caption */
+  }
+
+  .gallery-item-3:hover {
+    transform: scale(1.1);
+  }
+
+
+  .gallery-item-3:hover {
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 765px) {
+
+    .gallery-item img,
+  .gallery-item-2 img ,
+  .gallery-item-3 img {
+    width: 100%;
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }

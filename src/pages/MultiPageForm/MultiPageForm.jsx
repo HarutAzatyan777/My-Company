@@ -94,13 +94,15 @@ const MultiPageForm = ({ currentLanguage, handleLanguageSwitch }) => {
           currentPage={currentPage}
           handleInputChange={handleInputChange}
         />
-
-        <button className='previous' onClick={handlePrevPage} disabled={currentPage === 0}>
+<div className='PN'>
+<button className='previous' onClick={handlePrevPage} disabled={currentPage === 0}>
           Previous
         </button>
-        <button onClick={currentPage === questionsData.length - 1 ? () => { handleFormSubmit(); } : handleNextPage}>
+        <button className='send' onClick={currentPage === questionsData.length - 1 ? () => { handleFormSubmit(); } : handleNextPage}>
           {currentPage === questionsData.length - 1 ? 'Send' : 'Next'}
         </button>
+</div>
+ 
       </div>
     )}
   </div>
