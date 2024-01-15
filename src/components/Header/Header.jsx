@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 import './Header.css'; // Import your CSS file for styling
 
 const Header = ({ currentLanguage, onLanguageSwitch }) => {
@@ -22,8 +23,10 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
   return (
     
     <header className={`main-header ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-      <div className="logo-container">
-        <img src="Logo.png" alt="Logo" className="logo" />
+    <div className="logo-container">
+        <NavLink to="/">
+          <img src="Logo.png" alt="Logo" className="logo" />
+        </NavLink>
       </div>
       <nav className={`main-navigation ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <div className="menu-icon" onClick={toggleMobileMenu}>
@@ -57,16 +60,16 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
               </ScrollLink>
             </div>
           </li>
-          <li>
-            <ScrollLink to="resources" smooth={true} duration={500}>
-              Resources
-            </ScrollLink>
-          </li>
           
           <li>
             <ScrollLink to="priceplans" smooth={true} duration={500}>
               Price Plans
             </ScrollLink>
+          </li>
+          <li>
+            <NavLink to="/resources">
+              Resources
+            </NavLink>
           </li>
           <li>
             <ScrollLink to="login" smooth={true} duration={500}>

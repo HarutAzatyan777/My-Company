@@ -1,0 +1,28 @@
+/* ReferalLink.css */
+
+/* Apply Flexbox and set direction to row */
+.referal-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
+    
+  }
+  
+  /* Apply the scrollGallery animation to the section elements */
+  .referal-section {
+    animation: scrollGallery4 200s linear infinite; /* Adjust the duration and timing function as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  /* Keyframes for the scrollGallery animation */
+  @keyframes scrollGallery4 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 8 * 3)); /* Adjust the width of each item and the number of items */
+    }
+  }
+  

@@ -11,7 +11,9 @@ function Services({ currentLanguage}) {
   return (
     <div id="priceplans">
     <section iclassName="services-section">
+      <div className='our-services'>
       <h2>Our Services</h2>
+      </div>
       <div className="services-container">
         {/* Developer Services */}
         <div className="service-item">

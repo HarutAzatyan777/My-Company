@@ -10,6 +10,7 @@ import Features from '../Features/Features';
 import Resources from '../Resources/Resources';
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
+import ReferalLink from '../ReferalLink/ReferalLink';
 
 
 
@@ -36,6 +37,7 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
       </section>
 
       <section id="getstarted">
+      <ReferalLink />
    <GetStarted currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
 </section>
 
