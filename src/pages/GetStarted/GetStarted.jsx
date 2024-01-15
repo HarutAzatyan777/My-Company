@@ -7,7 +7,7 @@ import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 
 const GetStarted = ({ currentLanguage, handleLanguageSwitch }) => {
-  const translations = currentLanguage === 'am' ? langAM : langEN;
+  const translations = currentLanguage === 'en' ? langAM : langEN;
   return (
     <div id='get-started' className="container">
       <h2>{translations.get_started_button}</h2>

@@ -1,15 +1,20 @@
-
 {
-    "welcome_message": "Welcome to Our Agency",
-    "intro_paragraph1": "We are a team of freelance web developers, ready to bring your ideas to life.",
-    "intro_paragraph2": "Our expertise extends to working with in-house teams within businesses. Let's collaborate to create innovative and impactful web solutions.",
-    "get_started_button": "Get Started",
-    "plans":"This is the Plans & Pricing page content. Add details about your pricing plans here.",
-
-    "services_Dev":"Developer"
-
-    
-
-  }
-  
-
+  "welcome_message": "Welcome to Our Agency",
+  "intro_paragraph1": "We are a team of freelance web developers, ready to bring your ideas to life.",
+  "intro_paragraph2": "Our expertise extends to working with in-house teams within businesses. Let's collaborate to create innovative and impactful web solutions.",
+  "get_started_button": "Get Started",
+  "plans": "This is the Plans & Pricing page content. Add details about your pricing plans here.",
+  "services_Dev": "Developer",
+  "howCanWeHelp": "How can we help your business succeed with Web Development Services?",
+  "ourServices": "Our Services",
+  "design": "Design",
+  "devOps": "DevOps",
+  "seo": "SEO",
+  "uiUx": "UI/UX",
+  "basic": "Basic",
+  "pro": "Pro",
+  "enterprise": "Enterprise",
+  "basicPlanDescription": "Essential features for small businesses and personal projects.",
+  "proPlanDescription": "Advanced features for growing businesses with increased demands.",
+  "enterprisePlanDescription": "Customized solutions for large enterprises. Get in touch for a quote."
+}

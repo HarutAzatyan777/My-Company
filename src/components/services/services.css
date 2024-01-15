@@ -18,6 +18,14 @@
   background-color: #f5f5f5;
   text-align: center;
 }
+.our-services h2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #4caf50;
+  background-color: #333;
+  border-radius: 25px;
+}
 
 .services-container {
   display: flex;

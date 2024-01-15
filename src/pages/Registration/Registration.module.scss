@@ -1,0 +1,53 @@
+/* Register.module.scss */
+.register{
+  display: flex;
+  justify-content: center;
+}
+.container-register {
+    width: 100%;
+    padding: 300px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+  }
+  
+  .title-register {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .field-register {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button-register {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-register:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .registerText {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+
+
