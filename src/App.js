@@ -1,25 +1,25 @@
-// App.jsx
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import RoutesConfig from './routes';
 import Footer from './components/Footer/Footer';
-
-// import Home from './pages/Home/Home';
-
-
+import ReactGA from 'react-ga';
+import { animateScroll as scroll } from 'react-scroll'; // Import the scroll module
 
 const App = () => {
-  // const [currentLanguage, setCurrentLanguage] = useState('am'); // Default to Armenian
+  useEffect(() => {
+    // Initialize Google Analytics
+    ReactGA.initialize('G-RZR37FSYKG');
 
-  // const handleLanguageSwitch = () => {
-  //   setCurrentLanguage((prevLanguage) => (prevLanguage === 'am' ? 'en' : 'am'));
-  // };
+    // Track page view
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
+    // Scroll to the top when the component mounts
+    scroll.scrollToTop();
+  }, []);
 
   return (
     <div className="app">
-    
       <main className="main-content">
-   <RoutesConfig />
+        <RoutesConfig />
       </main>
       <Footer />
     </div>
