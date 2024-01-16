@@ -1,28 +1,47 @@
-/* ReferalLink.css */
+/* ReferralLink.css */
 
-/* Apply Flexbox and set direction to row */
-.referal-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Align items vertically in the center */
-    margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
-    
+.referral-section {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.referral-links p {
+  white-space: nowrap; /* Prevent line breaks */
+  margin: 0;
+}
+
+.referral-section a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.button-container button {
+  margin-right: 10px;
+}
+
+.reel-animation {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px;
+  animation: reelTransform 0.3s ease-in-out forwards; /* Add animation property */
+  animation-play-state: paused; /* Add animation-play-state property here */
+}
+
+.reel-animation:hover {
+  animation-play-state: running; /* Play the animation on hover */
+}
+
+@keyframes reelTransform {
+  from {
+    transform: scale(1);
   }
-  
-  /* Apply the scrollGallery animation to the section elements */
-  .referal-section {
-    animation: scrollGallery4 200s linear infinite; /* Adjust the duration and timing function as needed */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide any overflow */
+  to {
+    transform: scale(1.1);
   }
-  
-  /* Keyframes for the scrollGallery animation */
-  @keyframes scrollGallery4 {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-300px * 8 * 3)); /* Adjust the width of each item and the number of items */
-    }
-  }
-  
+}
