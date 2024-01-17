@@ -18,18 +18,26 @@
   padding: 40px 0;
   background-color: #f5f5f5;
   text-align: center;
+  background-color: #333;
 }
 .our-services h2{
   display: flex;
   justify-content: center;
   text-align: center;
+  color: #fff;
 
   border-radius: 25px;
+}
+
+.our-services img{
+  width: 400px;
+  height: 600px;
 }
 
 
 
 .services-container {
+  background-color: #333;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

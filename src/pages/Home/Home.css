@@ -3,12 +3,12 @@
 .landing-section {
   background-color: #333; /* Change the background color as needed */
   padding: 40px 0;
-  text-align: center;
+  text-align: start;
 }
 
 .landing-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: 40px;
 }
 
 .landing-content h1 {

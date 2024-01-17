@@ -6,15 +6,21 @@ import { BusinessSolutionsTemplate, CollaborativeProjectsTemplate, PersonalWebsi
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 
+const sectionStyle = {
+
+};
+
 function Services({ currentLanguage}) {
   const translations = currentLanguage === 'am' ? langAM : langEN;
   return (
     <div id="priceplans">
-    <section iclassName="services-section">
-      <div className='our-services'>
-      <h2>Our Services</h2>
-      </div>
-      <div className="services-container">
+     <section className="services-section" >
+     <div className='our-services'>
+    <h2>Our Services</h2>
+    {/* <img src="img/terminal.web" alt="Digital-services"  /> */}
+</div>
+
+      <div className="services-container" style={sectionStyle}>
         {/* Developer Services */}
         <div className="service-item">
           <h3>{translations.services_Dev}</h3>

@@ -36,17 +36,17 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
         <Products currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
       </section>
 
-      <section id="getstarted">
-      <ReferalLink />
-   <GetStarted currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
-</section>
 
 
       <Services />
       <Features />
       <Resources />
-   
+      <ReferalLink />
 
+      <section id="getstarted">
+   
+   <GetStarted currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
+</section>
     </div>
     
   );

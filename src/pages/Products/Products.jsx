@@ -21,13 +21,13 @@ function Gallery() {
       {/* Left-scrolling section */}
       <section className="gallery-container left-scroll">
 
-      <NavLink to="/Album" className="nav-link" onClick={toggleOpen}>
+      <NavLink to="https://www.awwwards.com/" className="nav-link" onClick={toggleOpen}>
           {/* Add NavLink to the first gallery section */}
           <div className="gallery">
             <div className="gallery-items left-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
                 <div className="gallery-item" key={index}>
-                  <img src={`/website/website${index}.png`} alt={`Website ${index}`} />
+                  <img src={`/website/website${index}.web`} alt={`Website ${index}`} />
                   <p className="image-caption">{t("let's go")}</p>
                 </div>
               ))}
@@ -35,7 +35,7 @@ function Gallery() {
           </div>
         </NavLink>
 
-        <NavLink to="/Album" className="nav-link"> {/* Add NavLink to the second gallery section */}
+        <NavLink to="https://dribbble.com/following" className="nav-link"> {/* Add NavLink to the second gallery section */}
           <div className="gallery-2">
             <div className="gallery-items-2 right-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
@@ -48,12 +48,12 @@ function Gallery() {
           </div>
         </NavLink>
 
-        <NavLink to="/Album" className="nav-link"> {/* Add NavLink to the third gallery section */}
+        <NavLink to="https://dribbble.com/following" className="nav-link"> {/* Add NavLink to the third gallery section */}
           <div className="gallery-3">
             <div className="gallery-items-3 left-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
                 <div className="gallery-item-3" key={index}>
-                  <img src={`/website3/website${index}.png`} alt={`Website ${index}`} />
+                  <img src={`/website3/website${index}.web`} alt={`Website ${index}`} />
                   <p className="image-caption-3">{t("let's go")}</p>
                 </div>
               ))}

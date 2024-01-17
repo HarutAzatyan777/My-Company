@@ -6,13 +6,7 @@ import "./ReferalLink.css";
 // Define or import referralLinks
 const referralLinks = [
   { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://harutdev.com/blogHome", image: require('../../assets/ref/download1.png'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
-  { url: "https://www.digitalocean.com/?refcode=7ab6a2f045f2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge", image: require('../../assets/ref/download.jpg'), alt: "DigitalOcean Referral Badge" },
+
 ];
 
 const ReferralLink = () => {
