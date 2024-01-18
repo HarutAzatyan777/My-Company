@@ -27,10 +27,10 @@
 
 .reel-animation {
   width: 150px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  height: 200px; /* Maintain aspect ratio */
   max-height: 200px;
-  animation: reelTransform 0.3s ease-in-out forwards; /* Add animation property */
-  animation-play-state: paused; /* Add animation-play-state property here */
+  /* animation: reelTransform 0.3s ease-in-out forwards; 
+  animation-play-state: paused;  */
 }
 
 .reel-animation:hover {
