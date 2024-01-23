@@ -55,7 +55,6 @@ const RoutesConfig = () => {
         element={
           <Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}>
             <Home currentLanguage={currentLanguage} />
-         
           </Layout>
         }
       />
@@ -65,7 +64,7 @@ const RoutesConfig = () => {
       <Route path="/login" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Login /></Layout>} />
       <Route path="/get-started" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><GetStarted /></Layout>} />
       <Route path="/products" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Products /></Layout>} />
-      <Route path="/Album" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Album /></Layout>} />
+      <Route path="/album" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Album /></Layout>} />
       <Route path="/login" element={isAuth ? <Navigate to="/" /> : <Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Login /></Layout>} />
       <Route path="/register" element={isAuth ? <Navigate to="/" /> : <Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><Registration /></Layout>} />
       <Route path="/referal" element={<Layout currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch}><ReferalLink /></Layout>} />

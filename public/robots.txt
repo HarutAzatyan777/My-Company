@@ -1,3 +1,29 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /private/
+Disallow: /confidential/
+Disallow: /temp/
+Disallow: /config.ini
+Disallow: /secrets.txt
+Disallow: /login
+Disallow: /register
+Disallow: /referal
+
+Allow: /public/  # Adjust this to your public assets directory
+
+# Tech Solutions
+Disallow: /tech-solutions/
+Disallow: /tech-solutions/category1/
+Disallow: /tech-solutions/category2/
+
+# Programming
+Disallow: /programming/
+Disallow: /programming/java/
+Disallow: /programming/javascript/
+
+# Digital Marketing
+Disallow: /digital-marketing/
+Disallow: /digital-marketing/seo/
+Disallow: /digital-marketing/social-media/
+
+Sitemap: https://codered.harutdev.com/sitemap.xml
