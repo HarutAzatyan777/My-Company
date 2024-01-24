@@ -40,13 +40,14 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
 
       <Services />
       <Features />
-      <Resources />
-      <ReferalLink />
-
       <section id="getstarted">
    
    <GetStarted currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
 </section>
+      <Resources />
+      <ReferalLink />
+
+
     </div>
     
   );
