@@ -18,17 +18,22 @@
 }
 
 .button-container {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .button-container button {
   margin-right: 10px;
+  border-radius: 50%;
+  
 }
 
 .reel-animation {
   width: 150px; /* Adjust the width as needed */
   height: 200px; /* Maintain aspect ratio */
   max-height: 200px;
+  border-radius: 25px;
   /* animation: reelTransform 0.3s ease-in-out forwards; 
   animation-play-state: paused;  */
 }

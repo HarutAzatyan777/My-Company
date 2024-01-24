@@ -2,7 +2,6 @@
 
 import React from 'react';
 import './services.css'; // Importing styles for the Services component
-import { BusinessSolutionsTemplate, CollaborativeProjectsTemplate, PersonalWebsiteTemplate } from '../Templates/Templates';
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 
@@ -54,7 +53,7 @@ function Services({ currentLanguage}) {
 
       {/* Plans & Pricing */}
       <section className="pricing-section">
-        <h2>Plans & Pricing</h2>
+      
         <div className="pricing-container">
           <div className="pricing-item">
             <h3>Basic</h3>
@@ -75,9 +74,9 @@ function Services({ currentLanguage}) {
           </div>
         </div>
       </section>
-      <PersonalWebsiteTemplate />
+      {/* <PersonalWebsiteTemplate />
     <BusinessSolutionsTemplate />
-    <CollaborativeProjectsTemplate/>
+    <CollaborativeProjectsTemplate/> */}
     </section>
     </div>
   );

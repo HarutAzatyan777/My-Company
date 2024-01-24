@@ -6,7 +6,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  max-width: 400px;
+ 
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -31,25 +31,21 @@
   margin-bottom: 20px;
 }
 
-.form-label {
-  display: block;
-  margin-bottom: 10px;
-  text-align: left;
-  width: 100%;
-}
 
-.form-input {
+
+
+#email.form-control-2 {
+  /* Add your styles for the email input here */
   width: 100%;
+  min-width: 600px;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin: 5px 0;
   box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 25px;
+  /* Add more styles as needed */
 }
 
-.get-input {
-  width: 100%;
-}
 
 .custom-button {
   background-color: #4caf50;
@@ -93,5 +89,8 @@
 
   .custom-button {
     font-size: 14px;
+  }
+  #email.form-control-2 {
+    min-width: 250px;
   }
 }

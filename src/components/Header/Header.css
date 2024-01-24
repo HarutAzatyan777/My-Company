@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333; /* Change the background color as needed */
+  background-color: #495565; /* Change the background color as needed */
   color: #fff; /* Change the text color as needed */
 }
 
@@ -16,6 +16,7 @@
 .logo {
   width: 100px; /* Adjust the width of the logo */
   height: auto;
+  color: #000;
 }
 
 .main-navigation {
@@ -196,7 +197,7 @@ input.check-toggle-round-flat + label:before {
   left: 2px;
   bottom: 2px;
   right: 2px;
-  background-color: #22b36f;
+  background-color: #DB2404;
   border-radius: 60px;
 }
 

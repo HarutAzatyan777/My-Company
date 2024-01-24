@@ -13,9 +13,9 @@ const ReferralLink = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const linksPerPage = 3; // Number of links to show per page
 
-  const handleNextPage = () => {
-    setPageIndex((prevIndex) => (prevIndex + 1) % Math.ceil(referralLinks.length / linksPerPage));
-  };
+  // const handleNextPage = () => {
+  //   setPageIndex((prevIndex) => (prevIndex + 1) % Math.ceil(referralLinks.length / linksPerPage));
+  // };
 
   const handleButtonClick = (pageNumber) => {
     setPageIndex(pageNumber - 1); // Subtract 1 to convert page number to zero-based index
