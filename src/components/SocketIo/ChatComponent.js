@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import instance from './Axios'; // Import the Axios instance
-
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'; // Import Axios for making HTTP requests
 
 const ChatComponent = () => {
+  const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState('');
 
   const sendMessage = async () => {
     try {
-      // Make a POST request using the Axios instance
-      await instance.post('/socket-io-data', { data: messageInput });
+      // Make a POST request to the server to send the message
+      await axios.post('/socket-io-data', { data: messageInput });
 
       // Optionally, update the local state or perform any other actions
       console.log('Message sent successfully');
     } catch (error) {
       console.error('Error sending message:', error);
-      // Handle the error (e.g., display a message to the user)
     }
 
     setMessageInput(''); // Clear the input field after sending the message
@@ -23,6 +21,11 @@ const ChatComponent = () => {
 
   return (
     <div>
+      <ul>
+        {messages.map((msg, index) => (
+          <li key={index}>{msg}</li>
+        ))}
+      </ul>
       <input
         type="text"
         value={messageInput}

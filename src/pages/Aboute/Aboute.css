@@ -1,0 +1,43 @@
+/* About.css */
+
+.about-container {
+    padding: 20px;
+    background-color: #E3E5E9;
+
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .aboute-us{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-item {
+    flex-basis: calc(50% - 20px); /* Two items per row with margin */
+    margin-bottom: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: box-shadow 0.3s; /* Add transition for box shadow */
+  }
+  
+  .about-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+  }
+  
+  .about-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 20px;
+  }
+  
+  .about-item p {
+    font-size: 16px;
+    color: #666;
+    padding: 20px;
+  }
+  

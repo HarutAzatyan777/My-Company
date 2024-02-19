@@ -8,9 +8,11 @@ import Products from "../Products/Products"
 import GetStarted from '../GetStarted/GetStarted';
 import Features from '../Features/Features';
 import Resources from '../Resources/Resources';
+import Aboute from '../Aboute/Aboute'
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 import ReferalLink from '../ReferalLink/ReferalLink';
+// import ChatComponent from '../../components/SocketIo/ChatComponent';
 
 
 
@@ -36,8 +38,8 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
         <Products currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
       </section>
 
-
-
+    {/* <ChatComponent /> */}
+      <Aboute />
       <Services />
       <Features />
       <Resources />

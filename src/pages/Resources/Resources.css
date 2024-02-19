@@ -2,7 +2,7 @@
 
 .resources-container {
   padding: 40px;
-  background-color: #EF5926;
+  background-color: #E3E5E9;
   text-align: center;
 }
 
@@ -15,12 +15,20 @@
 
 .resource-item {
   max-width: 300px;
+  max-height: 600px;
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.resource-img {
+  width: 100%; /* Ensure the image fills the container */
+  border-radius: 8px; /* Apply border radius to the image */
+  margin-bottom: 10px; /* Add space below the image */
+  height: 300px;
+  overflow: hidden;
 }
 
 .resource-item h3 {
@@ -36,6 +44,7 @@
 }
 
 .resource-item a {
+  
   display: block;
   padding: 10px;
   background-color: #3498db;
@@ -49,7 +58,7 @@
   background-color: #2980b9;
 }
 
-/* Add additional styles based on your design needs */
+/* Additional styles */
 .codeRedDescription {
   max-width: 800px;
   margin: 0 auto;
@@ -84,4 +93,3 @@ p {
 p {
   animation: fadeInUp 1s ease-out;
 }
-

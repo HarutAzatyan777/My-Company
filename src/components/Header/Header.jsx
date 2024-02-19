@@ -43,6 +43,11 @@ const Header = ({ currentLanguage, onLanguageSwitch }) => {
               Products
             </ScrollLink>
           </li>
+          <li>
+            <ScrollLink to="aboute" smooth={true} duration={500}>
+             Aboute Us
+            </ScrollLink>
+          </li>
           <li className="dropdown">
             <ScrollLink to="Features" smooth={true} duration={500}>
               Features

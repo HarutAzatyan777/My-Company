@@ -1,13 +1,19 @@
 /* Header.css */
 
 .main-header {
+  position: fixed; /* Change positioning to fixed */
+  top: 0; /* Fix the header to the top */
+  left: 0; /* Align the header to the left */
+  width: 100%; /* Make the header span the full width of the viewport */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #495565; /* Change the background color as needed */
   color: #fff; /* Change the text color as needed */
+  z-index: 9999;
 }
+
 
 .logo-container {
   /* Add any styling for the logo container */
@@ -68,6 +74,7 @@
 .menu-icon {
   display: none; /* Hide menu icon by default for larger screens */
   cursor: pointer;
+  margin-right: 50px;
 }
 
 .bar {
@@ -78,7 +85,7 @@
   transition: 0.4s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 885px) {
   .menu-icon {
     display: block; /* Display menu icon for smaller screens */
   }
@@ -91,7 +98,7 @@
     position: absolute;
     top: 70px; /* Adjust the top spacing as needed */
     left: 0;
-    background-color: #333; /* Change the background color as needed */
+    background-color: #495565; /* Change the background color as needed */
     z-index: 1;
     opacity: 0;
     visibility: hidden;
@@ -100,7 +107,7 @@
   }
 
   .main-header.mobile-menu-open {
-    background-color: #555; /* Change the background color when the mobile menu is open */
+    background-color: #495565; /* Change the background color when the mobile menu is open */
     /* Add any additional styles for the main header when the mobile menu is open */
   }
   
