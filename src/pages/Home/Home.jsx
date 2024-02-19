@@ -38,7 +38,7 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
         <Products currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
       </section>
 
-    {/* <ChatComponent /> */}
+    {/* <ChatComponent />  */}
       <Aboute />
       <Services />
       <Features />
