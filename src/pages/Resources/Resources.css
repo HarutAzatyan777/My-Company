@@ -15,7 +15,6 @@
 
 .resource-item {
   max-width: 300px;
-  max-height: 600px;
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -23,11 +22,12 @@
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .resource-img {
-  width: 100%; /* Ensure the image fills the container */
-  border-radius: 8px; /* Apply border radius to the image */
-  margin-bottom: 10px; /* Add space below the image */
-  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  height: 200px; /* Adjust height for smaller screens */
   overflow: hidden;
 }
 
@@ -44,7 +44,6 @@
 }
 
 .resource-item a {
-  
   display: block;
   padding: 10px;
   background-color: #3498db;
@@ -92,4 +91,15 @@ p {
 
 p {
   animation: fadeInUp 1s ease-out;
+}
+
+/* Media Query for Mobile Screens */
+@media only screen and (max-width: 600px) {
+  .resources-item {
+    max-width: 100%;
+  }
+
+  .resource-img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
 }

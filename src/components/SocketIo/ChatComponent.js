@@ -1,14 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import instance from '../../Axios'; // Import the Axios instance
+// ChatComponent.js
+
+import React, { useState, useEffect, useRef } from 'react';
+import instance from '../../Axios';
+import './ChatComponent.css'; // Import the CSS file
+import simulateBotResponse from './botResponses'; // Import the botResponses file
+
+const questions = [
+  'Tell me about your web development services',
+  'What mobile app development services do you offer?',
+  // ... (other questions)
+];
 
 const ChatComponent = () => {
   const [messageInput, setMessageInput] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [isQuestionSelected, setIsQuestionSelected] = useState(false);
+  const [hoveredQuestion, setHoveredQuestion] = useState(null);
+  const [clickedQuestion, setClickedQuestion] = useState(null);
   const [messages, setMessages] = useState([]);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const chatContainerRef = useRef(null);
 
   useEffect(() => {
     // Fetch messages when the component mounts
     fetchMessages();
+
+    // Add event listener for clicks on the document
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      document.removeEventListener('click', handleDocumentClick);
+    };
   }, []);
 
   const fetchMessages = async () => {
@@ -31,13 +54,13 @@ const ChatComponent = () => {
       ]);
 
       // If the user selected a question, simulate a response based on the selected question
-      if (selectedQuestion) {
+      if (isQuestionSelected) {
         const botResponse = await simulateBotResponse(selectedQuestion);
         setMessages((prevMessages) => [
           ...prevMessages,
           { text: botResponse, sender: 'bot' },
         ]);
-        setSelectedQuestion(null); // Reset selected question after responding
+        setIsQuestionSelected(false); // Reset the question selected state after responding
       }
 
       console.log('Message sent successfully');
@@ -51,135 +74,86 @@ const ChatComponent = () => {
   const handleQuestionSelect = (question) => {
     setSelectedQuestion(question);
     setMessageInput(question); // Set the selected question as the message input
+    setIsQuestionSelected(true); // Update the state to indicate a question is selected
+    setClickedQuestion(question); // Set the clicked question for styling
   };
 
-  const simulateBotResponse = async (userMessage) => {
-    // Simulate bot responses based on user-selected questions
-    switch (userMessage.toLowerCase()) {
-      case 'tell me about your web development services':
-        return "Bot: Our web development services include creating responsive and user-friendly websites. Whether it's a corporate site or an e-commerce platform, we've got you covered!";
-      case 'what mobile app development services do you offer?':
-        return "Bot: Transform your ideas into reality with our mobile app development services. From iOS to Android, we build apps that stand out in the digital marketplace.";
-      case 'how can you assist with data science projects?':
-        return "Bot: Dive into the world of data science with us. Uncover actionable insights and make informed decisions through advanced analytics and machine learning.";
-      case 'what will your name be?':
-        return "Bot: My name is ChatBot. How can I assist you today?";
-      case 'what website would you like?':
-        return "Bot: We can help you create a custom website tailored to your needs. Do you have specific requirements in mind?";
-      case 'do you have a server?':
-        return "Bot: Yes, we have servers to host and deploy your applications. What specific server-related information are you looking for?";
-      case 'what services do they provide?':
-        return "Bot: We provide a range of services including web development, mobile app development, data science, cloud computing, IoT, cybersecurity, UI/UX design, and more. How can we assist you?";
-      case 'how can I contact you?':
-        return "Bot: You can contact us through our website's contact page or by sending an email to info@example.com.";
-      case 'tell me about your UI/UX design services':
-        return "Bot: Our UI/UX design services focus on creating visually appealing and user-friendly interfaces. We prioritize user experience to ensure your digital products are intuitive and engaging.";
-      // Add more cases for additional questions
-      default:
-        return "Bot: I'm sorry, I didn't understand. Please ask about our digital, tech, or programming services.";
+  const handleMouseEnter = (question) => {
+    setHoveredQuestion(question);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredQuestion(null);
+  };
+
+  const toggleChat = () => {
+    setIsChatOpen((prevIsChatOpen) => !prevIsChatOpen);
+  };
+
+  const handleDocumentClick = (e) => {
+    // Close the chat if the click is outside of the chat container
+    if (chatContainerRef.current && !chatContainerRef.current.contains(e.target)) {
+      setIsChatOpen(false);
     }
   };
 
   return (
-    <div>
-      <div style={styles.messageContainer}>
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            style={{
-              ...styles.message,
-              textAlign: message.sender === 'bot' ? 'left' : 'right',
-            }}
-          >
-            {message.sender === 'bot' ? (
-              <p>{`Bot: ${message.text}`}</p>
-            ) : (
-              <p>{`User: ${message.text}`}</p>
-            )}
+    <div ref={chatContainerRef} className={`chat-container ${isChatOpen ? 'open' : ''}`}>
+      {isChatOpen && (
+        <div className="chat-content">
+          <div className="message-container">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`message ${message.sender === 'bot' ? 'text-left' : 'text-right'}`}
+              >
+                {message.sender === 'bot' ? (
+                  <p>{`Bot: ${message.text}`}</p>
+                ) : (
+                  <p>{`User: ${message.text}`}</p>
+                )}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div style={styles.questionContainer}>
-        <p>Select a question:</p>
-        <ul>
-          <li onClick={() => handleQuestionSelect('Tell me about your web development services')}>
-            Tell me about your web development services
-          </li>
-          <li onClick={() => handleQuestionSelect('What mobile app development services do you offer?')}>
-            What mobile app development services do you offer?
-          </li>
-          <li onClick={() => handleQuestionSelect('How can you assist with data science projects?')}>
-            How can you assist with data science projects?
-          </li>
-          <li onClick={() => handleQuestionSelect('What will your name be?')}>
-            What will your name be?
-          </li>
-          <li onClick={() => handleQuestionSelect('What website would you like?')}>
-            What website would you like?
-          </li>
-          <li onClick={() => handleQuestionSelect('Do you have a server?')}>
-            Do you have a server?
-          </li>
-          <li onClick={() => handleQuestionSelect('What services do they provide?')}>
-            What services do they provide?
-          </li>
-          <li onClick={() => handleQuestionSelect('How can I contact you?')}>
-            How can I contact you?
-          </li>
-          <li onClick={() => handleQuestionSelect('Tell me about your UI/UX design services')}>
-            Tell me about your UI/UX design services
-          </li>
-          {/* Add more questions here */}
-        </ul>
-      </div>
-      <div style={styles.inputContainer}>
-        <input
-          type="text"
-          value={messageInput}
-          onChange={(e) => setMessageInput(e.target.value)}
-          style={styles.input}
-        />
-        <button onClick={sendMessage} style={styles.button}>
-          Send
-        </button>
-      </div>
+          <div className="input-container">
+            <input
+              type="text"
+              value={messageInput}
+              onChange={(e) => setMessageInput(e.target.value)}
+              className="input"
+            />
+            <ul className={`question-container ${isChatOpen ? 'hidden' : ''}`}>
+              {questions.map((question) => (
+                <li
+                  key={question}
+                  onClick={() => handleQuestionSelect(question)}
+                  onMouseEnter={() => handleMouseEnter(question)}
+                  onMouseLeave={handleMouseLeave}
+                  className={`question ${hoveredQuestion === question ? 'hovered' : ''} ${
+                    clickedQuestion === question ? 'clicked' : ''
+                  }`}
+                >
+                  {question}
+                </li>
+              ))}
+            </ul>
+            <button onClick={sendMessage} className="button">
+              Send
+            </button>
+          </div>
+        </div>
+      )}
+      <button onClick={toggleChat} className="round-button">
+        <i className={`material-icons type2 for-closed ${isChatOpen ? 'active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+</svg>
+
+        </i>
+        {isChatOpen ? '' : ''}
+      </button>
     </div>
   );
-};
-
-const styles = {
-  messageContainer: {
-    maxHeight: '300px',
-    overflowY: 'auto',
-    padding: '10px',
-    border: '1px solid #ccc',
-  },
-  message: {
-    marginBottom: '8px',
-    padding: '4px',
-    borderBottom: '1px solid #eee',
-  },
-  questionContainer: {
-    marginTop: '10px',
-  },
-  inputContainer: {
-    marginTop: '10px',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  input: {
-    padding: '8px',
-    marginRight: '8px',
-    width: '70%',
-  },
-  button: {
-    padding: '8px',
-    backgroundColor: '#3498db',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-  },
 };
 
 export default ChatComponent;
