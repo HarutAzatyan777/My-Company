@@ -12,7 +12,7 @@ import Aboute from '../Aboute/Aboute'
 import langAM from '../../Translations/lang_am.json';
 import langEN from '../../Translations/lang_en.json';
 import ReferalLink from '../ReferalLink/ReferalLink';
-import ChatComponent from '../../components/SocketIo/ChatComponent';
+// import ChatComponent from '../../components/SocketIo/ChatComponent';
 
 
 
@@ -38,7 +38,7 @@ function Home({ currentLanguage, handleLanguageSwitch }) {
         <Products currentLanguage={currentLanguage} onLanguageSwitch={handleLanguageSwitch} />
       </section>
 
-    <ChatComponent /> 
+    {/* <ChatComponent />  */}
       <Aboute />
       <Services />
       <Features />
