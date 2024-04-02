@@ -21,8 +21,8 @@ function Gallery() {
       {/* Left-scrolling section */}
       <section className="gallery-container left-scroll">
 
-      <NavLink to="https://www.awwwards.com/" className="nav-link" onClick={toggleOpen}>
-          {/* Add NavLink to the first gallery section */}
+      <NavLink to="https://www.harutdev.com/" className="nav-link" onClick={toggleOpen}>
+         
           <div className="gallery">
             <div className="gallery-items left-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
@@ -35,7 +35,7 @@ function Gallery() {
           </div>
         </NavLink>
 
-        <NavLink to="https://dribbble.com/following" className="nav-link"> {/* Add NavLink to the second gallery section */}
+        <NavLink to="https://htmltagss.com/" className="nav-link"> {/* Add NavLink to the second gallery section */}
           <div className="gallery-2">
             <div className="gallery-items-2 right-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (
@@ -48,7 +48,7 @@ function Gallery() {
           </div>
         </NavLink>
 
-        <NavLink to="https://dribbble.com/following" className="nav-link"> {/* Add NavLink to the third gallery section */}
+        <NavLink to="https://htmltagss.com/ColorGenerator" className="nav-link"> {/* Add NavLink to the third gallery section */}
           <div className="gallery-3">
             <div className="gallery-items-3 left-scroll">
               {Array.from({ length: totalItems * duplicatedItems }, (_, index) => (index % totalItems) + 1).map((index) => (

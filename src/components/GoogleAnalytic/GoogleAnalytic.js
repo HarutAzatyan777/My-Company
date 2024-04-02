@@ -21,7 +21,7 @@ function GoogleAnalytics() {
                     window.dataLayer.push(arguments);
                 }
                 gtag('js', new Date());
-                gtag('config', 'UA-87269926-3');
+                gtag('config', 'G-RZR37FSYKG');
             };
 
             document.head.appendChild(script);
@@ -31,7 +31,7 @@ function GoogleAnalytics() {
         // Google Analytics tracking code
         try {
             if (location.pathname !== window.location.pathname && navigate.isPush) {
-                gtag('config', 'UA-87269926-3', {
+                gtag('config', 'G-RZR37FSYKG', {
                     'page_title': document.title,
                     'page_location': window.location.href,
                     'page_path': location.pathname,
