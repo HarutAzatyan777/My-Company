@@ -1,7 +1,7 @@
 {
   "welcome_message": "Welcome to Our Agency",
-  "intro_paragraph1": "We are a team of freelance web developers, ready to bring your ideas to life.",
-  "intro_paragraph2": "Our expertise extends to working with in-house teams within businesses. Let's collaborate to create innovative and impactful web solutions.",
+  "intro_paragraph1": "Experienced developer specializing in website and application development. Providing high-quality and efficient solutions, I ensure a secure and fast launch for all projects.",
+  "intro_paragraph2": "With over 6 years of experience and more than 50 successfully completed projects in various fields, I provide exceptional website development services. Let's collaborate to create innovative and impactful web solutions tailored to your needs.",
   "get_started_button": "Get Started",
   "plans": "This is the Plans & Pricing page content. Add details about your pricing plans here.",
   "services_Dev": "Developer",
@@ -16,5 +16,50 @@
   "enterprise": "Enterprise",
   "basicPlanDescription": "Essential features for small businesses and personal projects.",
   "proPlanDescription": "Advanced features for growing businesses with increased demands.",
-  "enterprisePlanDescription": "Customized solutions for large enterprises. Get in touch for a quote."
+  "enterprisePlanDescription": "Customized solutions for large enterprises. Get in touch for a quote.",
+  "services_description": {
+    "websites": "Making websites of any type and industry, from information sites to online stores.",
+    "performance_guarantee": "100% guarantee of performance and follow-up service, ensuring the high quality and safety of my products.",
+    "technical_support": "24/7 technical support and free consultation to solve any problem quickly."
+  },
+  "technologies": {
+    "frontend": [
+      "JavaScript",
+      "CSS 3",
+      "HTML 5",
+      "React.js",
+      "Vue.js",
+      "Next.js",
+      "Bootstrap",
+      "AngularJS",
+      "Bulma",
+      "Grunt",
+      "Gulp",
+      "LESS",
+      "Material UI",
+      "Redux",
+      "Sass",
+      "Tailwind CSS",
+      "Webpack"
+    ],
+    "backend": [
+      "Node.js",
+      "Google Cloud Platform",
+      "REST",
+      "Socket IO",
+      "Symfony",
+      "TypeScript",
+      "CMS"
+    ]
+  },
+  "value_proposition": "By choosing me, you choose reliability for sustainable and long-term solutions. Speed: Projects delivered on time and efficiently.",
+  "call_to_action": "Join me and let's create something unique together, making your business accessible to a wide audience!",
+  "additional_services": [
+    "WEB Websites",
+    "APP/Applications/Приложены",
+    "Website Programming/Programming",
+    "Site maintenance and updates",
+    "Database design and management"
+  ],
+  "collaboration_message": "Let's collaborate to bring your ideas to life."
 }
