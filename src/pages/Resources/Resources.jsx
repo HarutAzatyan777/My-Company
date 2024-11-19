@@ -124,7 +124,7 @@ const Resources = () => {
   ];
 
   return (
-    <div id='Recurces' className="resources-container">
+    <div id='Recources' className="resources-container">
       <h2>Developer Resources</h2>
       <div className="resources-list">
         {resourcesData.map((resource, index) => (

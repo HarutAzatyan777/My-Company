@@ -1,45 +1,65 @@
-// Footer.jsx
-
-import React from 'react';
-import './Footer.css'; // Import your CSS file for styling
+import React from "react";
+import LogoImage from "../../assets/Logo.png"; // Importing the logo
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  // Reusable contact link component for better structure
+  const ContactLink = ({ href, icon: Icon, text }) => (
+    <div className="contact-item">
+      <a href={href} className="contact-link" target="_blank" rel="noopener noreferrer">
+        <Icon className="contact-icon" />
+        <p>{text}</p>
+      </a>
+    </div>
+  );
+
   return (
-    <footer className="footer-container">
-      <div className="footer-content">
-        <div className="company-info">
-          <h3>Code Red</h3>
-          <p>
-            Armenia
-            <br />
-            Yerevan
-            <br />
-            Phone:+374-41-455-440
-            <br />
-            Email: developerhar@gmail.com
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Top Section */}
+        <div className="footer-top">
+          {/* Logo Section */}
+          <div className="logo-container">
+            <img src={LogoImage} alt="Company Logo" className="footer-logo" />
+          </div>
+          {/* Copyright Text */}
+          <p className="copyright-text">
+            &copy; {currentYear} Company. All rights reserved.
           </p>
         </div>
 
-        <div className="social-links">
-  <h3>Connect with Us</h3>
-  {/* Use '#' as a placeholder href */}
-  <a href="https://www.facebook.com/profile.php?id=61552807097380" target="_blank" rel="noopener noreferrer">
-    <i className="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/harut-azatyan/" target="_blank" rel="noopener noreferrer">
-    <i className="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/harut-azatyan/" target="_blank" rel="noopener noreferrer">
-    <i className="fab fa-linkedin"></i>
-  </a>
-  <a href="#" target="_blank" rel="noopener noreferrer">
-    <i className="fab fa-instagram"></i>
-  </a>
-</div>
-      </div>
+        {/* Content Section */}
+        <div className="footer-content">
+          <p>Senior Full Stack Developer (Web & Mobile): Harut Azatyan</p>
 
-      <div className="copyright">
-        <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+          {/* Location Section */}
+          <div className="location-info">
+            <FaMapMarkerAlt className="location-icon" />
+            <p>Location: Yerevan, Armenia</p>
+          </div>
+
+          {/* Contact Information Section */}
+          <div className="contact-info">
+            <ContactLink
+              href="tel:+37496454503"
+              icon={FaPhone}
+              text="+37496454503"
+            />
+            <ContactLink
+              href="mailto:harutazatyan45@gmail.com"
+              icon={FaEnvelope}
+              text="harutazatyan45@gmail.com"
+            />
+            <ContactLink
+              href="https://wa.me/37496454503"
+              icon={FaWhatsapp}
+              text="WhatsApp"
+            />
+          </div>
+        </div>
       </div>
     </footer>
   );
